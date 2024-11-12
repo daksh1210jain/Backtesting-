@@ -29,6 +29,7 @@ Future Improvements
 Add additional technical indicators for more advanced strategies.
 Implement risk management and position sizing to improve the strategy’s robustness.
 Conduct further backtesting over different stocks and market conditions.
+
 License
 This project is open-source and free to use.
 
