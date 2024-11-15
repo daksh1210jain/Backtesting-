@@ -30,6 +30,38 @@ Add additional technical indicators for more advanced strategies.
 Implement risk management and position sizing to improve the strategy’s robustness.
 Conduct further backtesting over different stocks and market conditions.
 
+# Gap Up Strategy
+The Gap Up Strategy identifies opportunities when the stock opens significantly higher than the previous day's close. The strategy assumes that such price movements could indicate bullish momentum.
+
+Strategy Rules:
+Buy Signal: When the stock's opening price is at least a certain percentage higher than the previous day’s close.
+Sell Signal: Exit at the end of the same day or on the next day’s open.
+Features:
+Detects "gap up" events using a customizable percentage threshold.
+Compares cumulative returns of the gap-up strategy with a buy-and-hold strategy.
+
+# Gap Down Strategy
+The Gap Down Strategy identifies trading opportunities when the stock opens significantly lower than the previous day’s close. The strategy assumes a potential for price recovery or bearish continuation.
+
+Strategy Rules:
+Buy Signal: When the stock's opening price is at least a certain percentage lower than the previous day’s close (gap-down event).
+Sell Signal: Exit at the end of the same day or on the next day’s open.
+Features:
+Detects "gap down" events using a customizable percentage threshold.
+Compares cumulative returns of the gap-down strategy with a buy-and-hold strategy.
+
+How It Works
+The strategies work by analyzing historical stock data:
+
+Data Source: Stock data is fetched using the yfinance library.
+Signal Generation:
+For Gap Up: Opening price > (Previous Close + Threshold).
+For Gap Down: Opening price < (Previous Close - Threshold).
+Backtesting:
+Log returns are calculated for both the strategy and a buy-and-hold benchmark.
+Cumulative returns are computed and plotted for comparison.
+Visualization:
+The performance of both strategies is plotted to compare with the buy-and-hold approach.
 License
 This project is open-source and free to use.
 
